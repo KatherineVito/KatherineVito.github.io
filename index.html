@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>Mi sitio HTML</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +14,32 @@
 <header>
     <div class="encabezado">
         <h1>My page web</h1>
-        <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
-
+        <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque
+            in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+            Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin
+            eget tortor risus.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque,
+            auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Donec sollicitudin
+            molestie malesuada. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque,
+            auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, accumsan id imperdiet et,
+            porttitor at sem.</p>
     </div>
-        <div class="formulario">
-            <br><br>
-            <h1>Generar Aterisco</h1>
-            <label for="num" class="m_form-label">Numero: </label>
-            <input type="text" class="m_form-control" id="num" name="num" >
-            <br><br>
-            <button type="submit" class="btn btn-info">Generar </button>
-
-            <br><br>
-            <textarea id="areaResult" rows="10" cols="30"></textarea>
-        </div>
 </header>
+<div class="formulario">
+    <form>
+        <br><br>
+        <h1>Generar Aterisco</h1>
+        <label for="num">Numero: </label>
+        <input type="text" id="num" name="num">
+        <br><br>
+        <button type="submit">Generar</button>
+
+        <br><br>
+        <textarea id="areaResult" rows="10" cols="30"></textarea>
+    </form>
+</div>
+
 </body>
 <script type="text/javascript">
     const urlSearchParams = new URLSearchParams(window.location.search);
@@ -39,19 +50,19 @@
     var resultado = '';
     for (let i = 0; i < numero; i++) {
         for (let j = 0; j < i + 1; j++) {
-            resultado +=  '*';
+            resultado += '*';
         }
         resultado += "\n"
     }
 
-    resultado+='';
+    resultado += '';
     for (let i = numero; i > 1; i--) {
-        for (let j = 0; j < i-1 ; j++) {
-            resultado +=  '*';
+        for (let j = 0; j < i - 1; j++) {
+            resultado += '*';
         }
         resultado += "\n"
     }
-    document.getElementById('areaResult').value+=resultado;
+    document.getElementById('areaResult').value += resultado;
 
 </script>
 </html>
