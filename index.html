@@ -17,5 +17,43 @@
         <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
 
     </div>
+    <form>
+        <div >
+            <br><br>
+            <h1 style = "font-family:Comic Sans MS">Generar Aterisco</h1>
+            <label for="num" class="m_form-label" style = "font-family:Comic Sans MS">Numero: </label>
+            <input type="text" class="m_form-control" id="num" name="num" >
+            <br><br>
+            <button type="submit" class="btn btn-info" style = "font-family:Comic Sans MS">Generar </button>
+
+            <br><br>
+            <textarea id="areaResult" rows="10" cols="30"></textarea>
+        </div>
+    </form>
 </header>
 </body>
+<script type="text/javascript">
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    var numerocad = params.num;
+    console.log(numerocad);
+    var numero = parseInt(numerocad);
+    var resultado = '';
+    for (let i = 0; i < numero; i++) {
+        for (let j = 0; j < i + 1; j++) {
+            resultado +=  '*';
+        }
+        resultado += "\n"
+    }
+
+    resultado+='';
+    for (let i = numero; i > 1; i--) {
+        for (let j = 0; j < i-1 ; j++) {
+            resultado +=  '*';
+        }
+        resultado += "\n"
+    }
+    document.getElementById('areaResult').value+=resultado;
+
+</script>
+</html>
