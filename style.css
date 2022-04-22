@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.encabezado{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.encabezado h1{
+    color: #1F1D5F;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.encabezado p{
+    margin-bottom: 10px;
+}
