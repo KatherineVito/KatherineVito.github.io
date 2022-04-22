@@ -24,3 +24,7 @@ body{
 .encabezado p{
     margin-bottom: 10px;
 }
+
+.formulario{
+    text-align:center;
+}
